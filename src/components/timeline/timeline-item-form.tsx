@@ -28,7 +28,7 @@ const formSchema = z.object({
     description: z.string().optional(),
     start_time: z.string().refine((val) => !isNaN(Date.parse(val)), 'Hora inválida'),
     end_time: z.string().optional(),
-    icon: z.string().default('clock'),
+    icon: z.string(),
 });
 
 type FormData = z.infer<typeof formSchema>;
