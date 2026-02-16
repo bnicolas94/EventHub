@@ -15,7 +15,7 @@ import {
     DialogTrigger,
 } from '@/components/ui/dialog';
 import { SubscriptionPlan } from '@/lib/types';
-import { updatePlan } from '@/app/actions/admin';
+import { updateSubscriptionPlan as updatePlan } from '@/app/actions/admin';
 import { toast } from 'sonner';
 import { Loader2 } from 'lucide-react';
 
