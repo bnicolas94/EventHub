@@ -4,7 +4,7 @@ import { PlanList } from '@/components/admin/plan-list';
 
 export default async function PlansPage() {
     const plansResult = await getPlans();
-    const plans = plansResult.success ? plansResult.data : [];
+    const plans = plansResult.success && plansResult.data ? plansResult.data : [];
 
     return (
         <div className="space-y-6">

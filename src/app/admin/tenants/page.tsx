@@ -9,8 +9,8 @@ export default async function AdminPage() {
         getPlans()
     ]);
 
-    const tenants = tenantsResult.success ? tenantsResult.data : [];
-    const plans = plansResult.success ? plansResult.data : [];
+    const tenants = tenantsResult.success && tenantsResult.data ? tenantsResult.data : [];
+    const plans = plansResult.success && plansResult.data ? plansResult.data : [];
 
     return (
         <div className="space-y-6">
