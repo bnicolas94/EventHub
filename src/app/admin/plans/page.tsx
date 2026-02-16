@@ -2,6 +2,8 @@
 import { getPlans } from '@/app/actions/admin';
 import { PlanList } from '@/components/admin/plan-list';
 
+export const dynamic = 'force-dynamic';
+
 export default async function PlansPage() {
     const plansResult = await getPlans();
     const plans = plansResult.success && plansResult.data ? plansResult.data : [];

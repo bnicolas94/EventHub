@@ -2,6 +2,8 @@
 import { getTenants, getPlans } from '@/app/actions/admin';
 import { TenantList } from '@/components/admin/tenant-list';
 
+export const dynamic = 'force-dynamic';
+
 export default async function AdminPage() {
     // Fetch data in parallel
     const [tenantsResult, plansResult] = await Promise.all([
